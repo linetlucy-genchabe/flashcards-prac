@@ -1,18 +1,33 @@
 <hr>
-<div *ngFor="let languages of languages, let i = index">
-    <ul>
-        <li>{{languages.name}}</li>
 
-        <div class="col">
+<div class="container">
+    <div class="row">
+        <div class="col-md4">
 
-            <h5 id={{i}}></h5>
-            <button (click)='toggleDetails(i)' class="btn btn-primary"> Description </button>
-            <app-language-detail *ngIf='languages.showDescription' [language]='languages'></app-language-detail>
+            <div *ngFor="let languages of languages, let i = index">
 
+
+
+                <div class="col">
+
+
+
+                    <li>
+                        <h5>{{languages.name}} </h5>
+                    </li>
+
+                    <h5 id={{i}}></h5>
+                    <button (click)='toggleDetails(i)' class="btn btn-primary"> Click me! </button>
+                    <app-language-detail *ngIf='languages.showDescription' [language]='languages'></app-language-detail>
+
+
+                </div>
+
+
+            </div>
         </div>
 
-    </ul>
-
+    </div>
 
 
 
@@ -21,8 +36,8 @@
         .col {
             height: 200px;
             width: 200px;
-            /* float: left; */
-            border: 2px solid green;
+            float: left;
+            border: 2px solid rgb(17, 153, 216);
             border-radius: 20px;
             box-shadow: 2px 2px 2px;
             margin-left: 15px;
@@ -30,6 +45,6 @@
         }
         
         .btn {
-            margin-top: 70px;
+            margin-top: 40px;
         }
     </style>

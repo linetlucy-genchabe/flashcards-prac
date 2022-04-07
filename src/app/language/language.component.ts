@@ -11,9 +11,9 @@ export class LanguageComponent implements OnInit {
   languages:Languages [] =[
    new Languages (1,"javascript","used to enhance functionality"),
    new Languages (2,"html","used for basic structure of pages"),
-   new Languages (3,"css","used for basic structure of pages"),
-   new Languages (4,"bootstrap","used for basic structure of pages"),
-   new Languages (5,"jquery","used for basic structure of pages"),
+   new Languages (3,"css","used for styling pages"),
+   new Languages (4,"bootstrap","used for styling pages"),
+   new Languages (5,"jquery","The purpose of jQuery is to make it much easier to use JavaScript on your website."),
 
   ];
  
