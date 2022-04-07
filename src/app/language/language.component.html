@@ -1,0 +1,35 @@
+<hr>
+<div *ngFor="let languages of languages, let i = index">
+    <ul>
+        <li>{{languages.name}}</li>
+
+        <div class="col">
+
+            <h5 id={{i}}></h5>
+            <button (click)='toggleDetails(i)' class="btn btn-primary"> Description </button>
+            <app-language-detail *ngIf='languages.showDescription' [language]='languages'></app-language-detail>
+
+        </div>
+
+    </ul>
+
+
+
+
+
+    <style>
+        .col {
+            height: 200px;
+            width: 200px;
+            /* float: left; */
+            border: 2px solid green;
+            border-radius: 20px;
+            box-shadow: 2px 2px 2px;
+            margin-left: 15px;
+            text-align: center;
+        }
+        
+        .btn {
+            margin-top: 70px;
+        }
+    </style>
